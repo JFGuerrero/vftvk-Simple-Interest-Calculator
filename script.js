@@ -9,16 +9,15 @@ function compute()
     var year = new Date().getFullYear() + parseInt(years);
     p = document.getElementById("principal").value;
 
-    if (p > 0) {
+    if (p <= 0) {
+        alert("Amount must be grater than 0");
+        document.getElementById("result").innerHTML = "";
+    } else{
         document.getElementById("result").innerHTML = "<br/>" +
             "If you deposit: " + principal + "<br/>" +
             "at an interest rate of: " + rate + "<br/>" +
             "You will receive an amount of: " + interest + "<br/>" +
-            "in the year: " + year;
-
-    } else{
-        alert("Amount must be grater than 0");
-        document.getElementById("result").innerHTML = "";
+            "in the year: " + year;        
     }
 }
 
