@@ -9,7 +9,7 @@ function compute()
     var year = new Date().getFullYear() + parseInt(years);
     p = document.getElementById("principal").value;
 
-    if (p <= 0) {
+    if (p <= "0") {
         alert("Amount must be grater than 0");
         document.getElementById("result").innerHTML = "";
     } else{
